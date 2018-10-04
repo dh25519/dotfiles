@@ -42,8 +42,10 @@ runtime ftplugin/man.vim
 " various options
 "
 set shiftwidth=4 expandtab smarttab
+set list
 set hlsearch
 set hidden number
+set visualbell
 
 
 " ****************************************************************************
@@ -59,7 +61,7 @@ call togglebg#map("")
 "
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
-set laststatus=2
+set laststatus=2 noshowmode
 
 
 " ****************************************************************************
