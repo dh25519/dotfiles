@@ -1,3 +1,6 @@
+" ****************************************************************************
+" plugins
+"
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -24,6 +27,7 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -33,17 +37,42 @@ call plug#end()
 
 runtime ftplugin/man.vim
 
+
+" ****************************************************************************
+" various options
+"
 set shiftwidth=4 expandtab smarttab
 set hlsearch
 set hidden number
 
+
+" ****************************************************************************
+" solarized
+"
 set background=dark
 colorscheme solarized
 call togglebg#map("")
+
+
+" ****************************************************************************
+" airline
+"
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 set laststatus=2
 
-let wiki_1 = {'syntax': 'markdown'}
-let wiki_2 = {'syntax': 'markdown', 'path': '~/git/vim-todotxt/wiki/', 'ext': '.md'}
-let g:vimwiki_list = [wiki_1, wiki_2]
+
+" ****************************************************************************
+" vimwiki
+"
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.nested_syntaxes = {'python': 'python', 'c': 'c', 'c++': 'cpp'}
+let wiki.syntax = 'markdown'
+
+let wiki_sandbox = {}
+let wiki_sandbox.path = '~/vimwiki/sandbox'
+let wiki_sandbox.nested_syntaxes = {'python': 'python', 'c': 'c', 'c++': 'cpp'}
+let wiki_sandbox.syntax = 'markdown'
+
+let g:vimwiki_list = [wiki, wiki_sandbox]
