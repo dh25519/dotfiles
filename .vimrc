@@ -20,6 +20,7 @@ else
 endif
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-fugitive'
