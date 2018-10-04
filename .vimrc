@@ -63,6 +63,14 @@ set laststatus=2
 " ****************************************************************************
 " vimwiki
 "
-let wiki_1 = {'syntax': 'markdown'}
-let wiki_2 = {'syntax': 'markdown', 'path': '~/git/vim-todotxt/wiki/', 'ext': '.md'}
-let g:vimwiki_list = [wiki_1, wiki_2]
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.nested_syntaxes = {'python': 'python', 'c': 'c', 'c++': 'cpp'}
+let wiki.syntax = 'markdown'
+
+let wiki_sandbox = {}
+let wiki_sandbox.path = '~/vimwiki/sandbox'
+let wiki_sandbox.nested_syntaxes = {'python': 'python', 'c': 'c', 'c++': 'cpp'}
+let wiki_sandbox.syntax = 'markdown'
+
+let g:vimwiki_list = [wiki, wiki_sandbox]
