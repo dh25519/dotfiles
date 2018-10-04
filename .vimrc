@@ -1,3 +1,6 @@
+" ****************************************************************************
+" plugins
+"
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -32,17 +35,34 @@ call plug#end()
 
 runtime ftplugin/man.vim
 
+
+" ****************************************************************************
+" various options
+"
 set shiftwidth=4 expandtab smarttab
 set hlsearch
 set hidden number
 
+
+" ****************************************************************************
+" solarized
+"
 set background=dark
 colorscheme solarized
 call togglebg#map("")
+
+
+" ****************************************************************************
+" airline
+"
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 set laststatus=2
 
+
+" ****************************************************************************
+" vimwiki
+"
 let wiki_1 = {'syntax': 'markdown'}
 let wiki_2 = {'syntax': 'markdown', 'path': '~/git/vim-todotxt/wiki/', 'ext': '.md'}
 let g:vimwiki_list = [wiki_1, wiki_2]
