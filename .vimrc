@@ -48,6 +48,7 @@ set list
 set hlsearch
 set hidden number
 set visualbell
+set wildmode=longest:full
 
 
 " ****************************************************************************
