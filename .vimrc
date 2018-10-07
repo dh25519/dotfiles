@@ -49,6 +49,7 @@ set hlsearch
 set hidden number
 set visualbell
 set wildmode=longest:full
+set sessionoptions+=unix,slash
 
 
 " ****************************************************************************
