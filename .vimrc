@@ -51,6 +51,7 @@ set visualbell
 set wildmode=longest:full
 set sessionoptions+=unix,slash
 set mouse=a
+set showcmd
 
 
 " ****************************************************************************
@@ -84,3 +85,7 @@ let wiki_sandbox.syntax = 'markdown'
 
 let g:vimwiki_list = [wiki, wiki_sandbox]
 let g:vimwiki_ext2syntax={'.md': 'markdown'}
+
+augroup filetype_vimwiki
+    autocmd FileType vimwiki setlocal textwidth=79
+augroup END
