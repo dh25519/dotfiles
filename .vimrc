@@ -78,12 +78,10 @@ set laststatus=2 noshowmode
 let wiki = {}
 let wiki.path = '~/vimwiki/'
 let wiki.nested_syntaxes = {'python': 'python', 'c': 'c', 'c++': 'cpp'}
-let wiki.syntax = 'markdown'
 
 let wiki_sandbox = {}
 let wiki_sandbox.path = '~/vimwiki/sandbox'
 let wiki_sandbox.nested_syntaxes = {'python': 'python', 'c': 'c', 'c++': 'cpp'}
-let wiki_sandbox.syntax = 'markdown'
 
 let g:vimwiki_list = [wiki, wiki_sandbox]
 let g:vimwiki_ext2syntax={'.md': 'markdown'}
