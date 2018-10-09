@@ -24,4 +24,5 @@ fi
 
 . ~/.bash_aliases
 
-export PS1="[\u@\h \W\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/  \1/')] \\$ "
+esc=$(printf '\033')
+export PS1="\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/$esc[01;33m\1$esc[00m/')\\$ "
