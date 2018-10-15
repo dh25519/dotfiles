@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export EDITOR="vim"
+
 if [ -x $(command -v fzf) ]; then
 
     if [ -x $(command -v fd) ]; then
