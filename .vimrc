@@ -55,6 +55,8 @@ set showcmd
 set timeoutlen=2000
 set concealcursor=nc
 
+let mapleader=','
+
 
 " ****************************************************************************
 " solarized
