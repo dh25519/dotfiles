@@ -30,3 +30,5 @@ git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/'`echo -e "\001\033[01;33m\002\\1\001\033[00m\002"`'/'
 }
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$(git_branch)\\$ "
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
