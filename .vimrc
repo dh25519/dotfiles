@@ -26,6 +26,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
@@ -43,7 +44,7 @@ runtime ftplugin/man.vim
 " ****************************************************************************
 " various options
 "
-set shiftwidth=4 expandtab smarttab
+set shiftwidth=4 tabstop=4 expandtab smarttab
 set list
 set hlsearch
 set hidden number
