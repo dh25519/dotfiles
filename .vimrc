@@ -19,7 +19,7 @@ call plug#begin('~/.vim/plugged')
 if filereadable('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf'
 else
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 endif
 
 Plug 'altercation/vim-colors-solarized'
