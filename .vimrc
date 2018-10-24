@@ -23,6 +23,7 @@ else
 endif
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'rbgrouleff/bclose.vim'
@@ -92,3 +93,11 @@ let g:vimwiki_ext2syntax={'.md': 'markdown'}
 augroup filetype_vimwiki
     autocmd FileType vimwiki setlocal textwidth=79
 augroup END
+
+
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <Esc>[1;5D :TmuxNavigateLeft<cr>
+nnoremap <silent> <Esc>[1;5B :TmuxNavigateDown<cr>
+nnoremap <silent> <Esc>[1;5A :TmuxNavigateUp<cr>
+nnoremap <silent> <Esc>[1;5C :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
