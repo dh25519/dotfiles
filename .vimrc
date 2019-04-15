@@ -89,12 +89,16 @@ let wiki_sandbox.nested_syntaxes = {'python': 'python', 'c': 'c', 'c++': 'cpp'}
 
 let g:vimwiki_list = [wiki, wiki_sandbox]
 let g:vimwiki_ext2syntax={'.md': 'markdown'}
+let g:vimwiki_folding='expr'
 
 augroup filetype_vimwiki
     autocmd FileType vimwiki setlocal textwidth=79
 augroup END
 
 
+" ****************************************************************************
+" tmux_navigator
+"
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <Esc>[1;5D :TmuxNavigateLeft<cr>
 nnoremap <silent> <Esc>[1;5B :TmuxNavigateDown<cr>
